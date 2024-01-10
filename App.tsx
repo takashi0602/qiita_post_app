@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, View, SafeAreaView } from "react-native";
 
 import { Header } from "./components/Header";
+import { PostItem } from "./features/post/components/PostItem";
 
 const App = () => {
   return (
@@ -10,7 +11,15 @@ const App = () => {
       <SafeAreaView style={styles.safeAreaWrapper}>
         <View style={styles.container}>
           <Header />
-          <Text>Open up App.tsx to start working on your app!</Text>
+          <View style={styles.postListContainer}>
+            <PostItem
+              url="https://qiita.com/Qiita/items/c686397e4a0f4f11683d"
+              iconUrl="https://s3-ap-northeast-1.amazonaws.com/qiita-image-store/0/88/ccf90b557a406157dbb9d2d7e543dae384dbb561/large.png?1575443439"
+              userId="qiita"
+              title="Example title"
+              createdAt="2000-01-01T00:00:00+00:00"
+            />
+          </View>
         </View>
       </SafeAreaView>
 
@@ -33,6 +42,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F6F6F4",
+  },
+  postListContainer: {
+    paddingTop: 16,
+    paddingHorizontal: 15,
   },
 });
 
