@@ -1,12 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 
+import { Header } from "./components/Header";
+
 const App = () => {
   return (
     <View style={styles.outWrapper}>
       <SafeAreaView style={styles.topSafeArea} />
       <SafeAreaView style={styles.safeAreaWrapper}>
         <View style={styles.container}>
+          <Header />
           <Text>Open up App.tsx to start working on your app!</Text>
         </View>
       </SafeAreaView>
