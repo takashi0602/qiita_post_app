@@ -42,7 +42,7 @@ const PostItem = ({ url, iconUrl, userId, title, createdAt }: Props) => {
     >
       <View style={styles.rowContainer}>
         <Image source={{ uri: iconUrl }} style={styles.icon} />
-        <View style={styles.columnContainer}>
+        <View>
           <Text style={styles.textBlack} numberOfLines={1}>
             @{userId}
           </Text>
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
   rowContainer: {
-    display: "flex",
     flexDirection: "row",
     columnGap: 10,
     alignItems: "center",
@@ -75,9 +74,6 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-  },
-  columnContainer: {
-    flex: 1,
   },
   textBlack: {
     fontSize: 15,
